@@ -90,6 +90,10 @@ module Middleman
         blog_page.page(current_resource.path)
       end
 
+      def current_blog_page?(page)
+        current_blog_page == page
+      end
+
       # Returns the list of articles to display on this page.
       # @return [Array<Middleman::Sitemap::Resource>]
       def blog_pages

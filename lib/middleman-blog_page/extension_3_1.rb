@@ -103,6 +103,12 @@ module Middleman
         nil
       end
 
+      # Determine whether the page is current page, useful for navigation.
+      # @return [Boolean]
+      def current_blog_page?(page)
+        current_blog_page == page
+      end
+
       # Returns the list of articles to display on this page.
       # @return [Array<Middleman::Sitemap::Resource>]
       def blog_pages(key=nil)

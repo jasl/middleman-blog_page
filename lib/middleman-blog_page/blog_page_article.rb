@@ -54,8 +54,7 @@ module Middleman
       # 3. article date is after the current time
       # @return [Boolean]
       def published?
-        (data["published"] != false) and
-          (blog_options.publish_future_dated || date <= Time.current)
+        data["published"] != false
       end
 
       # The body of this article, in HTML. This is for
